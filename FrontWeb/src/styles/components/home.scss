@@ -1,0 +1,58 @@
+.services-navig {
+    margin-top: -93px;
+    ul {
+        list-style-type: none;
+        display: flex;
+        margin-top: 130px;
+        font-weight: bold;
+        margin-left: 20px;
+        background: $color-3;
+        width: 950px;
+        border-radius: 10rem;
+
+        a {
+            text-decoration: none;
+            padding: 20px;
+            li {
+                padding-left: 10px;
+                font-size: 25px;
+                color: white;
+                transition: 0.2s;
+                cursor: pointer;
+                &:hover {
+                    color: $color-2;
+                }
+            }
+        }
+
+        .nav-active {
+            position: relative;
+  
+            &::after {
+                content: "";
+                height: 4px;
+                width: 0;
+                background: $color-2;
+                position: absolute;
+                border-radius: 10px;
+                bottom: 0px;
+                left: 50%;
+                transform: translateX(-50%);
+                -webkit-animation: anim 0.3s ease forwards;
+                animation: anim 0.6s ease forwards;
+  
+                @-webkit-keyframes anim {
+                    to {
+                        width: 100%;
+                    }
+                }
+                @keyframes anim {
+                    to {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+  

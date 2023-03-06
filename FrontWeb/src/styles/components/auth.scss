@@ -1,0 +1,166 @@
+$color: #7D13BF;
+$color-1: #61dafb;
+$color-2: salmon;
+$color-3: #282c34;
+$color-4: #1B1B21;
+
+.center {
+  input{
+      height: 60px;
+      width: 500px;
+      border: none;
+      outline: none;
+      background-color: #2E2D3C; 
+  }
+}
+
+::placeholder {
+    color: white;
+    opacity: 50%;
+}
+
+.email {
+    margin-top: 50px;
+    font-size: 30px;
+    color: white;
+}
+
+.password {
+    font-size: 30px;
+    color: white;
+}
+
+.button {
+    user-select: none;
+    margin-top: 25px;
+    height: 30px;
+    width: 450px;
+    display: inline-block;
+    padding: .75rem 1.25rem;
+    border-radius: 10rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .15rem;
+    line-height: 1.5;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    text-align: center;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $color;
+      border-radius: 10rem;
+      z-index: -2;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: darken($color, 15%);
+      transition: all .3s;
+      border-radius: 10rem;
+      z-index: -1;
+    }
+    &:hover {
+      color: #fff;
+      &:before {
+        width: 100%;
+      }
+    }
+}
+
+* {
+    font-family: Arial;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+.hr-lines{
+  position: relative;
+  max-width: 500px;
+  margin: 15px auto;
+  text-align: center;
+}
+
+.hr-lines:before{
+  content:" ";
+  height: 2px;
+  width: 200px;
+  background: black;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+}
+
+.hr-lines:after{
+  content:" ";
+  height: 2px;
+  width: 200px;
+  background: black;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+.container {
+  display: flex;
+  white-space: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-left: -34px;
+}
+
+.container > div {
+  line-height: 10px;
+  text-align: center;
+}
+
+.not-a-member {
+  order: 1;
+  color: white;
+}
+
+.navigation {
+  order: 2;
+  margin-left: -35px;
+  a {
+    text-decoration: none;
+    li {
+      color: white;
+      display: flex;
+      text-decoration: underline;
+      transition: 0.2s;
+      cursor: pointer;
+      &:hover {
+        color: $color-3;
+      }
+    }
+  }
+}
+
+.already-exist {
+  color: #cc0000;
+}
+
+.second-input {
+    padding-top: 30px;
+}
+
+.login_button {
+    padding-top: 20px;
+}

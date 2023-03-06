@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  backend:
+    build: ./BackEnd
+    ports:
+      - "8080:8080"
+  frontweb:
+    build: ./FrontWeb
+    ports:
+      - "8081:8081"
+    volumes:
+      - fronts:/app
+    depends_on:
+      - backend
+volumes:
+  fronts:
